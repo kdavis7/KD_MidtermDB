@@ -20,7 +20,7 @@ $author = new Author($db);
 $data = json_decode(file_get_contents("php://input"));
 
 
-//checks to see if data is set for Author, if it is not set then echo error message. 
+//checks to see if data is empty for Author, if it is not set then echo error message. 
 if (!empty($data->author)) 
 {
     $author->author = $data->author;

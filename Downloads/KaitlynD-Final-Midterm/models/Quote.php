@@ -112,7 +112,7 @@
                 //Execute query
                 $stmt->execute();
 
-                //$row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
                 
                 if($stmt)  {
                     return $stmt;
@@ -136,7 +136,7 @@
                 WHERE
                 q.author_id = :author_id";
 
-                //Prepared statements
+                //Prepare statement
                 $stmt = $this->conn->prepare($query);
 
                 //Bind ID
@@ -213,7 +213,7 @@
                 printf("Error: %s. \n", $stmt->error);
                 return false;
             }
-            if (!empty($category->category)){
+            if (!empty($categories->category)){
                   $cat_arr = array(
                       'id'=> $categories->id,
                       'category'=>$categories->category
@@ -222,7 +222,7 @@
             }else{
                   echo json_encode(array('message'=> 'category_id Not Found'));
             }
-            if (!empty($author->author)){
+            if (!empty($authors->author)){
                   $auth_arr = array(
                       'id' => $author->id,
                       'author' => $author->author

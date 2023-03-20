@@ -16,7 +16,7 @@
         $this->port = getenv('PORT');
         }
     
-        // DB Connect
+        // DB Connection
          public function connect () {
              if ($this->conn) {
                  return $this->conn;
