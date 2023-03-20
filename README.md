@@ -1,4 +1,4 @@
-# KD_MidtermDB
+# Kaitlyn_Davis Midterm DB
 Midterm DB quotes for Midterm assignment Inf653
 My Quotes Db full of some of my favorite quotes!
 
